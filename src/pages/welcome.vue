@@ -47,7 +47,7 @@ export default defineComponent({
       </transition>
     </div>
 
-    <HelloWorld :msg="t('hello') + ' 👋 ' + t('welcome')" />
+    <WelCome :msg="t('hello') + ' 👋 ' + t('welcome')" />
 
     <footer class="text-center">
       <ul class="flex justify-between w-1/3 mx-auto mb-8">

@@ -1,52 +1,55 @@
-<script setup lang="ts">
-import { ref } from 'vue'
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-defineProps<{ msg: string }>()
+export default defineComponent({
+  name: 'HelloWorld',
+  props: {
+    msg: {
+      type: String,
+      required: true,
+    },
+  },
+  setup: () => {
+    const { t } = useI18n()
 
-const count = ref(0)
+    return { t }
+  },
+})
 </script>
-
 <template>
-  <h1>{{ msg }}</h1>
+  <div class="text-center text-md">
+    <h1 class="font-serif font-bold font-bold text-4xl mb-8">{{ msg }}</h1>
 
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-  </p>
+    <p>
+      {{ t('recomended-ide') }}
+      <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
+      +
+      <a
+        href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"
+        target="_blank"
+      >
+        Vetur
+      </a>
+      or
+      <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
+      ({{ t('if-using') }} <code>&lt;script setup&gt;</code>)
+    </p>
 
-  <p>See <code>README.md</code> for more information.</p>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-  </p>
-
-  <button type="button" @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+    <p>{{ t('See') }} <code>README.md</code> {{ t('more-info') }}</p>
+    <p class="mb-10">
+      <a href="https://vitejs.dev/guide/features.html" target="_blank">
+        Vite Docs
+      </a>
+      |
+      <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
+    </p>
+  </div>
 </template>
 
 <style scoped>
-a {
-  color: #42b983;
-}
-
 label {
   margin: 0 0.5em;
   font-weight: bold;
-}
-
-code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #304455;
 }
 </style>
