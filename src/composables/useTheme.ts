@@ -1,17 +1,17 @@
-import { Ref } from 'vue';
-import { useDark, useToggle } from '@vueuse/core';
+import { Ref } from 'vue'
+import { useDark, useToggle } from '@vueuse/core'
 
 export interface ThemeComposition {
-  isDark: Ref<boolean>;
-  toggleDark: () => boolean;
+  isDark: Ref<boolean>
+  toggleDark: () => boolean
 }
 
 export function useTheme(): ThemeComposition {
-  const isDark = useDark();
-  const toggleDark = useToggle(isDark);
+  const isDark = useDark()
+  const toggleDark = useToggle(isDark)
 
   return {
     isDark,
     toggleDark,
-  };
+  }
 }

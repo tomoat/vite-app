@@ -1,7 +1,9 @@
-import { defineConfig } from 'vite-plugin-windicss';
-import typography from 'windicss/plugin/typography';
+import { defineConfig } from 'vite-plugin-windicss'
+import typography from 'windicss/plugin/typography'
 
 export default defineConfig({
+  // attributify: true,
+  preflight: true,
   darkMode: 'class',
   plugins: [typography()],
   theme: {
@@ -11,4 +13,4 @@ export default defineConfig({
       mono: ['Fira Sans', 'ui-monospace', 'SFMono-Regular'],
     },
   },
-});
+})
