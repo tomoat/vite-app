@@ -6,7 +6,7 @@ import { createI18n, I18n, I18nOptions } from 'vue-i18n'
 import en from '/@/locales/en.json'
 import zh from '/@/locales/zh.json'
 // import { setHtmlPageLang, setLoadLocalePool } from './helper'
-// import { localeSetting } from '~/settings/localeSetting'
+import { localeSetting } from '/@/config/localeSetting'
 // import { useLocaleStoreWithOut } from '~/store/modules/locale'
 
 // const { fallback, availableLocales } = localeSetting
@@ -20,13 +20,13 @@ async function createI18nOptions(): Promise<I18nOptions> {
   return {
     legacy: false,
     // globalInjection: false,
-    locale: 'zh',
-    fallbackLocale: 'zh',
+    locale: localeSetting.locale,
+    fallbackLocale: localeSetting.fallback,
     messages: {
       zh,
       en,
     },
-    availableLocales: ['zh', 'en'],
+    availableLocales: localeSetting.availableLocales,
     sync: true, //If you don’t want to inherit locale from global scope, you need to set sync of i18n component option to false.
     silentTranslationWarn: true, // true - warning off
     missingWarn: false,

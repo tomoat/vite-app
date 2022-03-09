@@ -4,9 +4,8 @@
   </page-header-wrapper>
 </template>
 
-<script>
-
+<script lang="ts">
 export default {
-  name: 'PageView'
+  name: 'PageView',
 }
 </script>

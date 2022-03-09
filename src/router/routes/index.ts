@@ -131,18 +131,18 @@ export const constantRoutes = [
         component: () => import('/@/pages/auth/Login.vue'),
         meta: { title: t('routes.login'), auth: false },
       },
-      {
-        path: 'register',
-        name: 'Register',
-        component: () => import('/@/pages/auth/Register.vue'),
-        meta: { title: t('routes.register'), auth: false },
-      },
-      {
-        path: 'register-result',
-        name: 'registerResult',
-        component: () => import('/@/pages/user/RegisterResult.vue'),
-        meta: { title: t('routes.registerResult'), auth: false },
-      },
+      // {
+      //   path: 'register',
+      //   name: 'Register',
+      //   component: () => import('/@/pages/auth/Register.vue'),
+      //   meta: { title: t('routes.register'), auth: false },
+      // },
+      // {
+      //   path: 'register-result',
+      //   name: 'registerResult',
+      //   component: () => import('/@/pages/user/RegisterResult.vue'),
+      //   meta: { title: t('routes.registerResult'), auth: false },
+      // },
     ],
   },
   {

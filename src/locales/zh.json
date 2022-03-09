@@ -4,5 +4,10 @@
     "login": "登录",
     "register": "注册",
     "errorLogList": "错误日志列表"
-  }
+  },
+  "auth.login.forgetFormTitle": "重置密码",
+  "auth.login.signInFormTitle": "登录",
+  "auth.login.signUpFormTitle": "注册",
+  "auth.login.mobileSignInFormTitle": "手机登录",
+  "auth.login.qrSignInFormTitle": "二维码登录"
 }

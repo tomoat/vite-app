@@ -4,13 +4,10 @@
   </div>
 </template>
 
-<script>
-
+<script lang="ts">
 export default {
-  name: 'BlankLayout'
+  name: 'BlankLayout',
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

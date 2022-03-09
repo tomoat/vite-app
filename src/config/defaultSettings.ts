@@ -56,7 +56,7 @@ const defaultSetting = {
    * @description show theme switch for nav menu
    */
   navTheme: 'dark',
-  primaryColor: '#1890FF',
+  primaryColor: '#1890FF', // '#0960bd' primary color of ant design
   /**
    * @type {string} 'sidemenu' | 'topmenu'
    * @description set nav menu position: sidemenu or topmenu
@@ -67,6 +67,8 @@ const defaultSetting = {
    * @description layout of content (Fluid or Fixed), only works when layout is topmenu
    */
   contentWidth: 'Fluid',
+
+  StoragePrefix: 'antd-pro-',
 }
 
 export default defaultSetting

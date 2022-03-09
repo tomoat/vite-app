@@ -49,9 +49,39 @@ export default defineConfig({
       include: [resolve(__dirname, './src/locales/**')],
     }),
   ],
+  // css: [
+  //   '@/assets/css/global.css',
+  //   '@/assets/css/reset.css',
+  //   '@/assets/css/windicss.css',
+  // ],
+  css: {
+    // loaderOptions: {
+    //   postcss: {
+    //     plugins: [
+    //       require('postcss-preset-env')({
+    //         autoprefixer: {
+    //           flexbox: 'no-2009',
+    //         },
+    //         stage: 3,
+    //       }),
+    //     ],
+    //   },
+    // },
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+      },
+    },
+  },
 
   optimizeDeps: {
-    include: ['vue', 'vue-router', '@vueuse/core'],
+    include: [
+      'vue',
+      'vue-router',
+      '@vueuse/core',
+      '@ant-design/icons-vue',
+      'ant-design-vue',
+    ],
     exclude: ['vue-demi'],
   },
 })

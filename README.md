@@ -127,4 +127,9 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 4. Open the VSCode command palette
 5. Search and run "Select TypeScript version" -> "Use workspace version"
 
+高级表格欢迎使用
+yarn add @ant-design/pro-table
+高级布局欢迎使用
+yarn add @ant-design/pro-layout
+
 ![repository-banner.png](https://res.cloudinary.com/alvarosaburido/image/upload/v1612193118/as-portfolio/Repo_Banner_kexozw.png)
