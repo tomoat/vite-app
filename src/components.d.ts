@@ -4,8 +4,11 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    CountButton: typeof import('./components/CountDown/CountButton.vue')['default']
+    CountdownInput: typeof import('./components/CountDown/CountdownInput.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     RightContent: typeof import('./components/RightContent/RightContent.vue')['default']
+    SettingDrawer: typeof import('./components/SettingDrawer/index.vue')['default']
     WelCome: typeof import('./components/WelCome.vue')['default']
   }
 }

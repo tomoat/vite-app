@@ -70,10 +70,14 @@ export default defineConfig({
     preprocessorOptions: {
       less: {
         javascriptEnabled: true,
+        modifyVars: {
+          hack: `true; @import 'ant-design-vue/es/style/themes/default.less'`, // dark.less
+          // '@primary-color': '#52c41a', // 全局主色
+          '@namespace': 'proofread',
+        },
       },
     },
   },
-
   optimizeDeps: {
     include: [
       'vue',

@@ -1,4 +1,5 @@
 import { http } from '/@/utils/http'
+import { loginResult, UserInfo } from './userInterface'
 
 interface captchaType extends Promise<any> {
   svg?: string
@@ -13,12 +14,12 @@ export const getVerify = (): captchaType => {
 
 // 登录
 export const getLogin = (data: object) => {
-  return http.request('post', '/login', { data })
+  return http.request<loginResult>('post', '/login', { data })
 }
 
 // 刷新token
 export const refreshToken = (data: object) => {
-  return http.request('post', '/refreshToken', { data })
+  return http.request<loginResult>('post', '/refreshToken', { data })
 }
 
 // export const searchVague = (data: object) => {
@@ -31,4 +32,8 @@ export const getAsyncRoutes = (params?: object) => {
 
 export const getSmsCaptcha = (data: object) => {
   return http.request('post', '/smsCaptcha', { data })
+}
+
+export function getUserInfo() {
+  return http.request<UserInfo>('get', '/userInfo')
 }

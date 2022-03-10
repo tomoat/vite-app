@@ -120,15 +120,15 @@ export const constantRoutes = [
   //   },
   // },
   {
-    path: '/user',
-    component: () => import('/@/layouts/UserLayout.vue'),
-    redirect: '/user/login',
+    path: '/auth',
+    component: () => import('/@/layouts/BlankLayout.vue'),
+    redirect: '/auth/login',
     hidden: true,
     children: [
       {
         path: 'login',
         name: 'Login',
-        component: () => import('/@/pages/auth/Login.vue'),
+        component: () => import('/@/pages/auth/LoginForm.vue'),
         meta: { title: t('routes.login'), auth: false },
       },
       // {

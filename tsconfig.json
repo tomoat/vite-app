@@ -19,6 +19,9 @@
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
     "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
     "paths": {
       "/@/*": ["src/*"]
     }

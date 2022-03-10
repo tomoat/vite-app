@@ -11,6 +11,8 @@ const getRouteNames = (array: any[]) =>
   })
 getRouteNames(routes)
 
+console.log(routes)
+
 export const Router = createRouter({
   scrollBehavior: () => ({ left: 0, top: 0 }),
   history: createWebHistory(),

@@ -9,5 +9,11 @@
   "auth.login.signInFormTitle": "登录",
   "auth.login.signUpFormTitle": "注册",
   "auth.login.mobileSignInFormTitle": "手机登录",
-  "auth.login.qrSignInFormTitle": "二维码登录"
+  "auth.login.qrSignInFormTitle": "二维码登录",
+  "auth.login.password": "密码",
+  "auth.login.userName": "账号",
+  "auth.login.rememberMe": "记住我",
+  "auth.login.loginButton": "忘记密码？",
+  "auth.login.registerButton": "注册",
+  "auth.login.otherSignIn": "另外的登录方式"
 }

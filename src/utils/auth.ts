@@ -12,7 +12,7 @@ export function getToken() {
   return getAuthCache(TOKEN_KEY)
 }
 
-export function setToken(token: string) {
+export function setToken(token: object) {
   setAuthCache(TOKEN_KEY, token)
 }
 

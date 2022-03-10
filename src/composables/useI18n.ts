@@ -2,14 +2,12 @@
 // import VueI18n from 'vue-i18n'
 
 // import type { App } from 'vue'
-import { createI18n, I18n, I18nOptions } from 'vue-i18n'
+import { createI18n, I18nOptions } from 'vue-i18n'
 import en from '/@/locales/en.json'
 import zh from '/@/locales/zh.json'
 // import { setHtmlPageLang, setLoadLocalePool } from './helper'
 import { localeSetting } from '/@/config/localeSetting'
 // import { useLocaleStoreWithOut } from '~/store/modules/locale'
-
-// const { fallback, availableLocales } = localeSetting
 
 // export let i18n: ReturnType<typeof createI18n>
 

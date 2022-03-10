@@ -8,34 +8,34 @@
     v-show="getShow"
     @keypress.enter="handleLogin"
   >
-    <FormItem name="account" class="enter-x">
+    <Form.Item name="account" class="enter-x">
       <Input
         size="large"
         v-model:value="formData.account"
         :placeholder="t('auth.login.userName')"
         class="fix-auto-fill"
       />
-    </FormItem>
-    <FormItem name="password" class="enter-x">
-      <InputPassword
+    </Form.Item>
+    <Form.Item name="password" class="enter-x">
+      <Input.Password
         size="large"
         visibilityToggle
         v-model:value="formData.password"
         :placeholder="t('auth.login.password')"
       />
-    </FormItem>
+    </Form.Item>
 
-    <ARow class="enter-x">
-      <ACol :span="12">
-        <FormItem>
+    <Row class="enter-x">
+      <Col :span="12">
+        <Form.Item>
           <!-- No logic, you need to deal with it yourself -->
           <Checkbox v-model:checked="rememberMe" size="small">
             {{ t('auth.login.rememberMe') }}
           </Checkbox>
-        </FormItem>
-      </ACol>
-      <ACol :span="12">
-        <FormItem :style="{ 'text-align': 'right' }">
+        </Form.Item>
+      </Col>
+      <Col :span="12">
+        <Form.Item :style="{ 'text-align': 'right' }">
           <!-- No logic, you need to deal with it yourself -->
           <Button
             type="link"
@@ -44,11 +44,11 @@
           >
             {{ t('auth.login.forgetPassword') }}
           </Button>
-        </FormItem>
-      </ACol>
-    </ARow>
+        </Form.Item>
+      </Col>
+    </Row>
 
-    <FormItem class="enter-x">
+    <Form.Item class="enter-x">
       <Button
         type="primary"
         size="large"
@@ -61,24 +61,24 @@
       <!-- <Button size="large" class="mt-4 enter-x" block @click="handleRegister">
         {{ t('auth.login.registerButton') }}
       </Button> -->
-    </FormItem>
-    <ARow class="enter-x">
-      <ACol :md="8" :xs="24">
+    </Form.Item>
+    <Row class="enter-x">
+      <Col :md="8" :xs="24">
         <Button block @click="setLoginState(LoginStateEnum.MOBILE)">
           {{ t('auth.login.mobileSignInFormTitle') }}
         </Button>
-      </ACol>
-      <ACol :md="8" :xs="24" class="!my-2 !md:my-0 xs:mx-0 md:mx-2">
+      </Col>
+      <Col :md="8" :xs="24" class="!my-2 !md:my-0 xs:mx-0 md:mx-2">
         <Button block @click="setLoginState(LoginStateEnum.QR_CODE)">
           {{ t('auth.login.qrSignInFormTitle') }}
         </Button>
-      </ACol>
-      <ACol :md="7" :xs="24">
+      </Col>
+      <Col :md="7" :xs="24">
         <Button block @click="setLoginState(LoginStateEnum.REGISTER)">
           {{ t('auth.login.registerButton') }}
         </Button>
-      </ACol>
-    </ARow>
+      </Col>
+    </Row>
 
     <Divider class="enter-x">{{ t('auth.login.otherSignIn') }}</Divider>
 
@@ -115,10 +115,6 @@ import {
 import { useDesign } from '/@/hooks/useDesign'
 //import { onKeyStroke } from '@vueuse/core';
 
-const ACol = Col
-const ARow = Row
-const FormItem = Form.Item
-const InputPassword = Input.Password
 const { t } = useI18n()
 // const { notification, createErrorModal } = useMessage()
 const { prefixCls } = useDesign('login')

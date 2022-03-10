@@ -1,13 +1,3 @@
 <template>
-  <div>
-    <router-view />
-  </div>
+  <router-view />
 </template>
-
-<script lang="ts">
-export default {
-  name: 'BlankLayout',
-}
-</script>
-
-<style scoped></style>
